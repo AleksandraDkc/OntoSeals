@@ -1,0 +1,2025 @@
+@prefix ns1: <http://www.co-ode.org/ontologies/ont.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix OntoSeals: <http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#a_collection
+OntoSeals:a_collection rdf:type owl:ObjectProperty ;
+                       rdfs:domain OntoSeals:Sceau ;
+                       rdfs:range OntoSeals:Collection .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#a_materiel
+OntoSeals:a_materiel rdf:type owl:ObjectProperty ;
+                     rdfs:domain OntoSeals:Sceau ;
+                     rdfs:range OntoSeals:Materiel .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#a_periode
+OntoSeals:a_periode rdf:type owl:ObjectProperty ;
+                    rdfs:domain OntoSeals:Sceau ;
+                    rdfs:range OntoSeals:Periode .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#appartient_a
+OntoSeals:appartient_a rdf:type owl:ObjectProperty ;
+                       rdfs:domain OntoSeals:Sceau ;
+                       rdfs:range OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#contient_objet
+OntoSeals:contient_objet rdf:type owl:ObjectProperty ;
+                         rdfs:domain OntoSeals:Sceau ;
+                         rdfs:range OntoSeals:Objet .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#contient_personnage
+OntoSeals:contient_personnage rdf:type owl:ObjectProperty ;
+                              rdfs:domain OntoSeals:Sceau ;
+                              rdfs:range OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#est_de_type
+OntoSeals:est_de_type rdf:type owl:ObjectProperty ;
+                      rdfs:domain OntoSeals:Sceau ;
+                      rdfs:range OntoSeals:Titre .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#avers
+OntoSeals:avers rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#bibliographie
+OntoSeals:bibliographie rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#date
+OntoSeals:date rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#date_end
+OntoSeals:date_end rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#date_start
+OntoSeals:date_start rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#description
+OntoSeals:description rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#mentionObligatoire
+OntoSeals:mentionObligatoire rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#revers
+OntoSeals:revers rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Arme
+OntoSeals:Arme rdf:type owl:Class ;
+               rdfs:subClassOf OntoSeals:Objet .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Bouclier
+OntoSeals:Bouclier rdf:type owl:Class ;
+                   rdfs:subClassOf OntoSeals:Arme .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cadre
+OntoSeals:Cadre rdf:type owl:Class ;
+                rdfs:subClassOf OntoSeals:Objet_de_decor .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cerclesgrenetis
+OntoSeals:Cerclesgrenetis rdf:type owl:Class ;
+                          rdfs:subClassOf OntoSeals:Objet_de_decor .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ
+OntoSeals:Christ rdf:type owl:Class ;
+                 rdfs:subClassOf OntoSeals:Personnage_biblique .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Collection
+OntoSeals:Collection rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Couronne_de_feuillage
+OntoSeals:Couronne_de_feuillage rdf:type owl:Class ;
+                                rdfs:subClassOf OntoSeals:Objet_de_decor .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croisette
+OntoSeals:Croisette rdf:type owl:Class ;
+                    rdfs:subClassOf OntoSeals:Symboles .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croix
+OntoSeals:Croix rdf:type owl:Class ;
+                rdfs:subClassOf OntoSeals:Symboles .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Dome
+OntoSeals:Dome rdf:type owl:Class ;
+               rdfs:subClassOf OntoSeals:Objet_de_decor .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Etendart
+OntoSeals:Etendart rdf:type owl:Class ;
+                   rdfs:subClassOf OntoSeals:Objet_de_decor .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Figure_politique
+OntoSeals:Figure_politique rdf:type owl:Class ;
+                           rdfs:subClassOf OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Figure_sainte
+OntoSeals:Figure_sainte rdf:type owl:Class ;
+                        rdfs:subClassOf OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Globe
+OntoSeals:Globe rdf:type owl:Class ;
+                rdfs:subClassOf OntoSeals:Arme .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Habillements
+OntoSeals:Habillements rdf:type owl:Class ;
+                       rdfs:subClassOf OntoSeals:Objet .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Hache
+OntoSeals:Hache rdf:type owl:Class ;
+                rdfs:subClassOf OntoSeals:Arme .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Lance
+OntoSeals:Lance rdf:type owl:Class ;
+                rdfs:subClassOf OntoSeals:Arme .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Lit
+OntoSeals:Lit rdf:type owl:Class ;
+              rdfs:subClassOf OntoSeals:Objet_d_assise .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Livre
+OntoSeals:Livre rdf:type owl:Class ;
+                rdfs:subClassOf OntoSeals:Objet .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Maquette
+OntoSeals:Maquette rdf:type owl:Class ;
+                   rdfs:subClassOf OntoSeals:Objet .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Materiel
+OntoSeals:Materiel rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Monture
+OntoSeals:Monture rdf:type owl:Class ;
+                  rdfs:subClassOf OntoSeals:Objet .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Objet
+OntoSeals:Objet rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Objet_d_assise
+OntoSeals:Objet_d_assise rdf:type owl:Class ;
+                         rdfs:subClassOf OntoSeals:Objet .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Objet_de_decor
+OntoSeals:Objet_de_decor rdf:type owl:Class ;
+                         rdfs:subClassOf OntoSeals:Objet .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Periode
+OntoSeals:Periode rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Personnage
+OntoSeals:Personnage rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Personnage_biblique
+OntoSeals:Personnage_biblique rdf:type owl:Class ;
+                              rdfs:subClassOf OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Personne
+OntoSeals:Personne rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Porte
+OntoSeals:Porte rdf:type owl:Class ;
+                rdfs:subClassOf OntoSeals:Objet_de_decor .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Rouleau
+OntoSeals:Rouleau rdf:type owl:Class ;
+                  rdfs:subClassOf OntoSeals:Symboles .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Sceau
+OntoSeals:Sceau rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Souppedion
+OntoSeals:Souppedion rdf:type owl:Class ;
+                     rdfs:subClassOf OntoSeals:Objet_d_assise .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Symboles
+OntoSeals:Symboles rdf:type owl:Class ;
+                   rdfs:subClassOf OntoSeals:Objet .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Table
+OntoSeals:Table rdf:type owl:Class ;
+                rdfs:subClassOf OntoSeals:Objet_de_decor .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Titre
+OntoSeals:Titre rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Trone
+OntoSeals:Trone rdf:type owl:Class ;
+                rdfs:subClassOf OntoSeals:Objet_d_assise .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vegetal
+OntoSeals:Vegetal rdf:type owl:Class ;
+                  rdfs:subClassOf OntoSeals:Objet_de_decor .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vetus
+OntoSeals:Vetus rdf:type owl:Class ;
+                rdfs:subClassOf OntoSeals:Habillements .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie
+OntoSeals:Vierge_marie rdf:type owl:Class ;
+                       rdfs:subClassOf OntoSeals:Personnage_biblique .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Alexis_I_Comnène
+OntoSeals:Alexis_I_Comnène rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Alexis_Stouditès
+OntoSeals:Alexis_Stouditès rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Alliage_cuivreux
+OntoSeals:Alliage_cuivreux rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Materiel .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Anonyme
+OntoSeals:Anonyme rdf:type owl:NamedIndividual ,
+                           OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Athanase_Ier
+OntoSeals:Athanase_Ier rdf:type owl:NamedIndividual ,
+                                OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Autel1
+OntoSeals:Autel1 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Table .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#BAGUE_SIGILLAIRE
+OntoSeals:BAGUE_SIGILLAIRE rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Titre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#BOULLÔTÈRION
+OntoSeals:BOULLÔTÈRION rdf:type owl:NamedIndividual ,
+                                OntoSeals:Titre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#BULLE_IMPÉRIALE
+OntoSeals:BULLE_IMPÉRIALE rdf:type owl:NamedIndividual ,
+                                   OntoSeals:Titre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Bouclier1
+OntoSeals:Bouclier1 rdf:type owl:NamedIndividual ,
+                             OntoSeals:Bouclier .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Bouclier2
+OntoSeals:Bouclier2 rdf:type owl:NamedIndividual ,
+                             OntoSeals:Bouclier .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Bouclier3
+OntoSeals:Bouclier3 rdf:type owl:NamedIndividual ,
+                             OntoSeals:Bouclier .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Byzantine_et_copte_Numismatique
+OntoSeals:Byzantine_et_copte_Numismatique rdf:type owl:NamedIndividual ,
+                                                   OntoSeals:Collection .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0215
+OntoSeals:CdN_2004-0215 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Zôsimas_Rhizaios ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis13 ,
+                                                 OntoSeals:Chitôn5 ,
+                                                 OntoSeals:Chlamyde2 ,
+                                                 OntoSeals:Cuirasse2 ,
+                                                 OntoSeals:Lance3 ,
+                                                 OntoSeals:Rênes_de_sa_monture1 ;
+                        OntoSeals:contient_personnage OntoSeals:Saint_militaire1 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "fin 13e s.- début 14e s."^^xsd:string ;
+                        OntoSeals:date_end "1400"^^xsd:int ;
+                        OntoSeals:date_start "1250"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0248
+OntoSeals:CdN_2004-0248 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Jean ;
+                        OntoSeals:contient_objet <http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Médaillon_avec_l’enfant1> ;
+                        OntoSeals:contient_personnage OntoSeals:Vierge_episkepsis1 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "1080 – 1100"^^xsd:string ;
+                        OntoSeals:date_end "1100"^^xsd:int ;
+                        OntoSeals:date_start "1080"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0269
+OntoSeals:CdN_2004-0269 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Athanase_Ier ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis10 ,
+                                                 OntoSeals:Coussin3 ,
+                                                 OntoSeals:Souppédion2 ,
+                                                 OntoSeals:Trône2 ,
+                                                 OntoSeals:Trône_à_haut_dossier1 ;
+                        OntoSeals:contient_personnage OntoSeals:Enfant4 ,
+                                                      OntoSeals:Vierge_platytera1 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_PATRIARCAL ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "1289 – 1309"^^xsd:string ;
+                        OntoSeals:date_end "1309"^^xsd:int ;
+                        OntoSeals:date_start "1289"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0274
+OntoSeals:CdN_2004-0274 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Alexis_Stouditès ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis14 ,
+                                                 OntoSeals:Maphorion2 ,
+                                                 OntoSeals:Porte2 ,
+                                                 OntoSeals:Rouleau2 ,
+                                                 OntoSeals:Souppédion5 ;
+                        OntoSeals:contient_personnage OntoSeals:Christ8 ,
+                                                      OntoSeals:Enfant6 ,
+                                                      OntoSeals:Vierge_marie11 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_PATRIARCAL ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "1025 – 1043"^^xsd:string ;
+                        OntoSeals:date_end "1043"^^xsd:int ;
+                        OntoSeals:date_start "1025"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0289
+OntoSeals:CdN_2004-0289 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Théodora ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis12 ,
+                                                 OntoSeals:Croix4 ;
+                        OntoSeals:contient_personnage OntoSeals:Christ_emmanuel1 ;
+                        OntoSeals:est_de_type OntoSeals:BULLE_IMPÉRIALE ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "1055 – 1056"^^xsd:string ;
+                        OntoSeals:date_end "1056"^^xsd:int ;
+                        OntoSeals:date_start "1055"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0313
+OntoSeals:CdN_2004-0313 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Alliage_cuivreux ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Sophia ;
+                        OntoSeals:contient_objet OntoSeals:Livre2 ;
+                        OntoSeals:contient_personnage OntoSeals:Saint_nicolas2 ;
+                        OntoSeals:est_de_type OntoSeals:TESSÈRE_DE_CHARITÉ ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "seconde moitié du 10e s."^^xsd:string ;
+                        OntoSeals:date_end "1000"^^xsd:int ;
+                        OntoSeals:date_start "950"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0319
+OntoSeals:CdN_2004-0319 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Joseph ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis2 ,
+                                                 OntoSeals:Chitôn1 ,
+                                                 OntoSeals:Coiffe_carrée1 ,
+                                                 OntoSeals:Croix1 ,
+                                                 OntoSeals:Livre1 ,
+                                                 OntoSeals:Omophorion1 ,
+                                                 OntoSeals:Phélonion1 ;
+                        OntoSeals:contient_personnage OntoSeals:Patriarche1 ,
+                                                      OntoSeals:Saint_taraise1 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "fin du 12e s."^^xsd:string ;
+                        OntoSeals:date_end "1200"^^xsd:int ;
+                        OntoSeals:date_start "1150"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire "MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0322
+OntoSeals:CdN_2004-0322 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Michel_Atouémès ;
+                        OntoSeals:contient_objet OntoSeals:Croisette_faite_de_trois_perles1 ,
+                                                 OntoSeals:Globe1 ,
+                                                 OntoSeals:Labarum1 ,
+                                                 OntoSeals:Lôros1 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "seconde moitié du 13e s."^^xsd:string ;
+                        OntoSeals:date_end "1300"^^xsd:int ;
+                        OntoSeals:date_start "1250"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0355
+OntoSeals:CdN_2004-0355 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Maria_Makrembolitissa ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis15 ,
+                                                 OntoSeals:Maphorion3 ,
+                                                 <http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Médaillon_au_buste_de_l’enfant1> ;
+                        OntoSeals:contient_personnage OntoSeals:Vierge_nikopoios1 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "1070 – 1080"^^xsd:string ;
+                        OntoSeals:date_end "1080"^^xsd:int ;
+                        OntoSeals:date_start "1070"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0362
+OntoSeals:CdN_2004-0362 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Léontios ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis16 ,
+                                                 OntoSeals:Croix_gravée1 ;
+                        OntoSeals:contient_personnage OntoSeals:Christ9 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "2e moitié 9e s."^^xsd:string ;
+                        OntoSeals:date_end "900"^^xsd:int ;
+                        OntoSeals:date_start "850"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0372
+OntoSeals:CdN_2004-0372 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Michel_Stryphnos ;
+                        OntoSeals:contient_objet OntoSeals:Bouclier1 ,
+                                                 OntoSeals:Cercle_de_grènetis5 ,
+                                                 OntoSeals:Court_chitôn1 ,
+                                                 OntoSeals:Hache1 ,
+                                                 OntoSeals:Lance1 ;
+                        OntoSeals:contient_personnage OntoSeals:Saint_hyacinthe1 ,
+                                                      OntoSeals:Saint_théodore1 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "avant 1192"^^xsd:string ;
+                        OntoSeals:date_end "1192"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0373
+OntoSeals:CdN_2004-0373 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Tibère_Empire_byzantin_Justinien_II ;
+                        OntoSeals:contient_objet OntoSeals:Chitôn2 ,
+                                                 OntoSeals:Couronne_de_feuillage1 ,
+                                                 OntoSeals:Croisette_pattée_dans_un_clipeus1 ,
+                                                 OntoSeals:Feuillage1 ,
+                                                 OntoSeals:Grand_palmier1 ,
+                                                 OntoSeals:Himation1 ,
+                                                 OntoSeals:Maphorion1 ,
+                                                 OntoSeals:Porte1 ;
+                        OntoSeals:contient_personnage OntoSeals:Enfant3 ,
+                                                      OntoSeals:Vierge_marie4 ,
+                                                      OntoSeals:Vierge_marie5 ;
+                        OntoSeals:est_de_type OntoSeals:BULLE_IMPÉRIALE ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "705 – 711"^^xsd:string ;
+                        OntoSeals:date_end "711"^^xsd:int ;
+                        OntoSeals:date_start "705"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0374
+OntoSeals:CdN_2004-0374 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Fer ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Nicéphore_de_Méloé ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis4 ,
+                                                 OntoSeals:Omophorion2 ,
+                                                 OntoSeals:Phélonion2 ,
+                                                 OntoSeals:Évangiles1 ;
+                        OntoSeals:contient_personnage OntoSeals:Saint_nicolas1 ;
+                        OntoSeals:est_de_type OntoSeals:BOULLÔTÈRION ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "11e s."^^xsd:string ;
+                        OntoSeals:date_end "1100"^^xsd:int ;
+                        OntoSeals:date_start "1000"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire "MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0379
+OntoSeals:CdN_2004-0379 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Grégoire ;
+                        OntoSeals:contient_objet OntoSeals:Bouclier3 ,
+                                                 OntoSeals:Chlamyde3 ,
+                                                 OntoSeals:Cuirasse3 ,
+                                                 OntoSeals:Lance_au_manche_orné_de_trois_boules1 ;
+                        OntoSeals:contient_personnage OntoSeals:Saint_théodore2 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "2e moitié 11e s."^^xsd:string ;
+                        OntoSeals:date_end "1100"^^xsd:int ;
+                        OntoSeals:date_start "1050"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire "MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0407
+OntoSeals:CdN_2004-0407 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Michel_VIII_Palaiologue ;
+                        OntoSeals:contient_objet OntoSeals:Souppédion4 ;
+                        OntoSeals:contient_personnage OntoSeals:Christ5 ,
+                                                      OntoSeals:Jesus_christ2 ;
+                        OntoSeals:est_de_type OntoSeals:BULLE_IMPÉRIALE ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "1261 – 1282"^^xsd:string ;
+                        OntoSeals:date_end "1282"^^xsd:int ;
+                        OntoSeals:date_start "1261"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0426
+OntoSeals:CdN_2004-0426 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Anonyme ;
+                        OntoSeals:contient_objet OntoSeals:Croix5 ,
+                                                 OntoSeals:Lit1 ;
+                        OntoSeals:contient_personnage OntoSeals:Christ6 ,
+                                                      OntoSeals:Christ7 ,
+                                                      OntoSeals:Vierge_marie7 ,
+                                                      OntoSeals:Vierge_marie8 ,
+                                                      OntoSeals:Vierge_marie9 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "12e s."^^xsd:string ;
+                        OntoSeals:date_end "1200"^^xsd:int ;
+                        OntoSeals:date_start "1150"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0433a
+OntoSeals:CdN_2004-0433a rdf:type owl:NamedIndividual ,
+                                  OntoSeals:Sceau ;
+                         OntoSeals:a_materiel OntoSeals:Plomb ;
+                         OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                         OntoSeals:appartient_a OntoSeals:Trésor_de_la_Grande_Eglise ;
+                         OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis1 ,
+                                                  OntoSeals:Coussin1 ,
+                                                  OntoSeals:Rouleau1 ,
+                                                  OntoSeals:Souppédion1 ,
+                                                  OntoSeals:Trône_bas1 ;
+                         OntoSeals:contient_personnage OntoSeals:Christ1 ,
+                                                       OntoSeals:Enfant1 ,
+                                                       OntoSeals:Vierge_marie1 ;
+                         OntoSeals:est_de_type OntoSeals:SCEAU_ECCLÉSIASTIQUE ;
+                         OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                         OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                         OntoSeals:date "milieu 11e s. (?)- 1ère moitié 12e s. (?)"^^xsd:string ;
+                         OntoSeals:date_end "1150"^^xsd:int ;
+                         OntoSeals:date_start "1000"^^xsd:int ;
+                         OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                         OntoSeals:mentionObligatoire "MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004" ;
+                         OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0439
+OntoSeals:CdN_2004-0439 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a <http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Ekdikoi_de_l'église_de_Sainte-Sophie_de_Constantinople> ;
+                        OntoSeals:contient_objet OntoSeals:Autel1 ,
+                                                 OntoSeals:Croix_patriarcale1 ,
+                                                 OntoSeals:Dôme1 ,
+                                                 OntoSeals:Dôme2 ,
+                                                 OntoSeals:Panneaux_lisses1 ,
+                                                 OntoSeals:Portail1 ,
+                                                 OntoSeals:Porte_royale_ouverte1 ,
+                                                 <http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Modèle_de_l'_église_de_sainte-sophie1> ;
+                        OntoSeals:contient_personnage OntoSeals:Justinien_ier1 ,
+                                                      OntoSeals:Vierge_marie2 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_ECCLÉSIASTIQUE ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "13e -14e siècles"^^xsd:string ;
+                        OntoSeals:date_end "1300"^^xsd:int ;
+                        OntoSeals:date_start "1200"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0449
+OntoSeals:CdN_2004-0449 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Théodora_Doukaina_Palaiologhina ;
+                        OntoSeals:contient_objet OntoSeals:Thôkos2 ,
+                                                 OntoSeals:Trône_bas2 ;
+                        OntoSeals:contient_personnage OntoSeals:Enfant5 ,
+                                                      OntoSeals:Vierge_marie10 ;
+                        OntoSeals:est_de_type OntoSeals:BULLE_IMPÉRIALE ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "1261 – 1282"^^xsd:string ;
+                        OntoSeals:date_end "1282"^^xsd:int ;
+                        OntoSeals:date_start "1261"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0482
+OntoSeals:CdN_2004-0482 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel <http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Alliage_cuivreux;_petite_cavité_au_milieu_de_deux_faces> ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Maria_Sklèraina ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis7 ,
+                                                 OntoSeals:Croisette2 ;
+                        OntoSeals:est_de_type OntoSeals:TESSÈRE_DE_CHARITÉ ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "1043 – 1045"^^xsd:string ;
+                        OntoSeals:date_end "1045"^^xsd:int ;
+                        OntoSeals:date_start "1043"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0502
+OntoSeals:CdN_2004-0502 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Humbert ;
+                        OntoSeals:contient_objet OntoSeals:Livre3 ;
+                        OntoSeals:contient_personnage OntoSeals:Saint_nicolas3 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "3e quart du 11e s."^^xsd:string ;
+                        OntoSeals:date_end "1100"^^xsd:int ;
+                        OntoSeals:date_start "1075"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0508
+OntoSeals:CdN_2004-0508 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Vitalès_Marztellos ;
+                        OntoSeals:contient_objet <http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Médaillon_de_l’enfant1> ;
+                        OntoSeals:contient_personnage OntoSeals:Vierge_marie6 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "12e s."^^xsd:string ;
+                        OntoSeals:date_end "1200"^^xsd:int ;
+                        OntoSeals:date_start "1150"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0526
+OntoSeals:CdN_2004-0526 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Liveros ;
+                        OntoSeals:contient_objet OntoSeals:Habit_persan1 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "13e s."^^xsd:string ;
+                        OntoSeals:date_end "1300"^^xsd:int ;
+                        OntoSeals:date_start "1250"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0534
+OntoSeals:CdN_2004-0534 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Anonyme ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis17 ,
+                                                 OntoSeals:Croisette4 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "12e s."^^xsd:string ;
+                        OntoSeals:date_end "1200"^^xsd:int ;
+                        OntoSeals:date_start "1100"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0537
+OntoSeals:CdN_2004-0537 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Or ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Constantin_IX_Monomaque ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis6 ,
+                                                 OntoSeals:Croisette1 ,
+                                                 OntoSeals:Évangiles2 ;
+                        OntoSeals:contient_personnage OntoSeals:Christ2 ,
+                                                      OntoSeals:Jesus_christ1 ;
+                        OntoSeals:est_de_type <http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#BULLE_D'OR_DE_5_SOLIDI> ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "1044 – 1046"^^xsd:string ;
+                        OntoSeals:date_end "1046"^^xsd:int ;
+                        OntoSeals:date_start "1044"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire "MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0538
+OntoSeals:CdN_2004-0538 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Or ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Empire_byzantin ;
+                        OntoSeals:est_de_type OntoSeals:BAGUE_SIGILLAIRE ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "789"^^xsd:string ;
+                        OntoSeals:date_end "789"^^xsd:int ;
+                        OntoSeals:date_start "789"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004
+		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0539
+OntoSeals:CdN_2004-0539 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Or ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a <http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Romain_Ier_Lécapène;Constantin_VII;Christophore> ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis8 ,
+                                                 OntoSeals:Chitôn3 ,
+                                                 OntoSeals:Croisette3 ,
+                                                 OntoSeals:Croix2 ,
+                                                 OntoSeals:Himation2 ,
+                                                 OntoSeals:Évangiles3 ;
+                        OntoSeals:contient_personnage OntoSeals:Christ3 ;
+                        OntoSeals:est_de_type <http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#BULLE_D'OR_DE_2_SOLIDI> ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "921 – 924"^^xsd:string ;
+                        OntoSeals:date_end "924"^^xsd:int ;
+                        OntoSeals:date_start "921"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire "MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0551
+OntoSeals:CdN_2004-0551 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Samuel_Alousianos ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis3 ,
+                                                 OntoSeals:Coussin2 ,
+                                                 OntoSeals:Thôkos1 ,
+                                                 OntoSeals:Trône1 ;
+                        OntoSeals:contient_personnage OntoSeals:Enfant2 ,
+                                                      OntoSeals:Mère_de_dieu1 ,
+                                                      OntoSeals:Vierge_marie3 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "dernier tiers du 11e s."^^xsd:string ;
+                        OntoSeals:date_end "1100"^^xsd:int ;
+                        OntoSeals:date_start "1075"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire "MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2004-0583
+OntoSeals:CdN_2004-0583 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Alexis_I_Comnène ;
+                        OntoSeals:contient_objet OntoSeals:Cercle_de_grènetis11 ,
+                                                 OntoSeals:Chitôn4 ,
+                                                 OntoSeals:Croix3 ,
+                                                 OntoSeals:Himation3 ,
+                                                 OntoSeals:Souppédion3 ,
+                                                 OntoSeals:Trône_à_haut_dossier2 ,
+                                                 OntoSeals:Évangiles4 ;
+                        OntoSeals:contient_personnage OntoSeals:Christ4 ;
+                        OntoSeals:est_de_type OntoSeals:BULLE_IMPÉRIALE ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "1081 – 1118"^^xsd:string ;
+                        OntoSeals:date_end "1118"^^xsd:int ;
+                        OntoSeals:date_start "1081"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Don de la Fondation Migore, legs Janet Zakos, 2004		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#CdN_2008-0049
+OntoSeals:CdN_2008-0049 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Sceau ;
+                        OntoSeals:a_materiel OntoSeals:Plomb ;
+                        OntoSeals:a_periode OntoSeals:Moyen_Age ;
+                        OntoSeals:appartient_a OntoSeals:Constantin_Lascaris_Comnène ;
+                        OntoSeals:contient_objet OntoSeals:Bouclier2 ,
+                                                 OntoSeals:Cercle_de_grènetis9 ,
+                                                 OntoSeals:Chitôn_court1 ,
+                                                 OntoSeals:Chlamyde1 ,
+                                                 OntoSeals:Cuirasse1 ,
+                                                 OntoSeals:Deux_cercles_de_grènetis1 ,
+                                                 OntoSeals:Lance2 ;
+                        OntoSeals:contient_personnage OntoSeals:Saint_georges1 ;
+                        OntoSeals:est_de_type OntoSeals:SCEAU_BYZANTIN ;
+                        OntoSeals:avers "dans uncercle de grènetis,Viergeassise,de face, sur untrône bas, au piètement de perles , garni d’ uncoussin; pieds posés sur unsouppédion, elle tientdevant ellel’Enfant,main droitesur son épaule , la gauche le long du corps du Christquibénitde la droiteet tient unrouleaude la gauche. De part et d’ autre dunimbe, les sigles pour :"^^xsd:string ;
+                        OntoSeals:bibliographie "Spink. Byzantine Seals from the collection of Georges Zacos,Part II, Auction 132. Londres, 1999 (25.5)., n° 208Zacos G., Veglery A., Byzantine lead seals, Allemagne, 1972, planches, vol I, page de titreCampagnolo-Pothitou Maria, Cheynet Jean-Claude, Sceaux de la collection George Zacos au Musée d'art et d'histoire de Genève, [Collections byzantines du MAH, Genève, 5], Milan, 5 Continents, 2016, p. 314, n° 275 "^^xsd:string ;
+                        OntoSeals:date "avant 1203"^^xsd:string ;
+                        OntoSeals:date_end "1203"^^xsd:int ;
+                        OntoSeals:description "Bénéficiaire de donations importantes , tant de la part de fidèles de condition modeste que de grandes familles aristocratiques , voire de l’ empereur lui-même , l’ Église avait pour charge principale de venir en aide aux indigents par des oeuvres de charité ponctuelles ( distributions de vivres , accès aux bains , rachats de prisonniers de guerre ) , ou de long terme ( entretien d’ hospices , d’ hôpitaux ou d’ orphelinats ) . La légende « parlante » de ce sceau unique fait allusion à la tâche impartie à l’ économe de la Grande Église et à son bureau , l’ Οἰκονομεῖον , à savoir seconder lepatriarchede Constantinople pour gérer au mieux la fortune de l’ institution dans l’ intérêt des ayants droit .La Viergeelle-même , représentée au droit du sceau , seportegarante du bon fonctionnement de l’ Oἰκονομεῖον de la Grande Église , en sa qualité de patronne de Constantinople et de donataire de Sainte-Sophie parJustinien Ier( ainsi figure -t -elle sur les sceaux des ekdikoi ) . Les empereursà ses côtés, outre la dévotion qu’ ils lui témoignent , tiennent les chrysobulles de donation à la Grande Église ."^^xsd:string ;
+                        OntoSeals:mentionObligatoire """
+MAH Musée d'art et d'histoire, Ville de Genève. Achat, 2008		""" ;
+                        OntoSeals:revers "légende métrique , accentuée , sur six lignes , précédée d’ unecroisette:"^^xsd:string .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis1
+OntoSeals:Cercle_de_grènetis1 rdf:type owl:NamedIndividual ,
+                                       OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis10
+OntoSeals:Cercle_de_grènetis10 rdf:type owl:NamedIndividual ,
+                                        OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis11
+OntoSeals:Cercle_de_grènetis11 rdf:type owl:NamedIndividual ,
+                                        OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis12
+OntoSeals:Cercle_de_grènetis12 rdf:type owl:NamedIndividual ,
+                                        OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis13
+OntoSeals:Cercle_de_grènetis13 rdf:type owl:NamedIndividual ,
+                                        OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis14
+OntoSeals:Cercle_de_grènetis14 rdf:type owl:NamedIndividual ,
+                                        OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis15
+OntoSeals:Cercle_de_grènetis15 rdf:type owl:NamedIndividual ,
+                                        OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis16
+OntoSeals:Cercle_de_grènetis16 rdf:type owl:NamedIndividual ,
+                                        OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis17
+OntoSeals:Cercle_de_grènetis17 rdf:type owl:NamedIndividual ,
+                                        OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis2
+OntoSeals:Cercle_de_grènetis2 rdf:type owl:NamedIndividual ,
+                                       OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis3
+OntoSeals:Cercle_de_grènetis3 rdf:type owl:NamedIndividual ,
+                                       OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis4
+OntoSeals:Cercle_de_grènetis4 rdf:type owl:NamedIndividual ,
+                                       OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis5
+OntoSeals:Cercle_de_grènetis5 rdf:type owl:NamedIndividual ,
+                                       OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis6
+OntoSeals:Cercle_de_grènetis6 rdf:type owl:NamedIndividual ,
+                                       OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis7
+OntoSeals:Cercle_de_grènetis7 rdf:type owl:NamedIndividual ,
+                                       OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis8
+OntoSeals:Cercle_de_grènetis8 rdf:type owl:NamedIndividual ,
+                                       OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cercle_de_grènetis9
+OntoSeals:Cercle_de_grènetis9 rdf:type owl:NamedIndividual ,
+                                       OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Chitôn1
+OntoSeals:Chitôn1 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Chitôn2
+OntoSeals:Chitôn2 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Chitôn3
+OntoSeals:Chitôn3 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Chitôn4
+OntoSeals:Chitôn4 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Chitôn5
+OntoSeals:Chitôn5 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Chitôn_court1
+OntoSeals:Chitôn_court1 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Chlamyde1
+OntoSeals:Chlamyde1 rdf:type owl:NamedIndividual ,
+                             OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Chlamyde2
+OntoSeals:Chlamyde2 rdf:type owl:NamedIndividual ,
+                             OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Chlamyde3
+OntoSeals:Chlamyde3 rdf:type owl:NamedIndividual ,
+                             OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ
+OntoSeals:Christ rdf:type owl:NamedIndividual ,
+                          OntoSeals:Personnage_biblique .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ1
+OntoSeals:Christ1 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ2
+OntoSeals:Christ2 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ3
+OntoSeals:Christ3 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ4
+OntoSeals:Christ4 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ5
+OntoSeals:Christ5 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ6
+OntoSeals:Christ6 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ7
+OntoSeals:Christ7 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ8
+OntoSeals:Christ8 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ9
+OntoSeals:Christ9 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ_emmanuel
+OntoSeals:Christ_emmanuel rdf:type owl:NamedIndividual ,
+                                   OntoSeals:Personnage_biblique .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Christ_emmanuel1
+OntoSeals:Christ_emmanuel1 rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Coiffe_carrée1
+OntoSeals:Coiffe_carrée1 rdf:type owl:NamedIndividual ,
+                                  OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Constantin_IX_Monomaque
+OntoSeals:Constantin_IX_Monomaque rdf:type owl:NamedIndividual ,
+                                           OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Constantin_Lascaris_Comnène
+OntoSeals:Constantin_Lascaris_Comnène rdf:type owl:NamedIndividual ,
+                                               OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Couronne_de_feuillage1
+OntoSeals:Couronne_de_feuillage1 rdf:type owl:NamedIndividual ,
+                                          OntoSeals:Couronne_de_feuillage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Court_chitôn1
+OntoSeals:Court_chitôn1 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Coussin1
+OntoSeals:Coussin1 rdf:type owl:NamedIndividual ,
+                            OntoSeals:Souppedion .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Coussin2
+OntoSeals:Coussin2 rdf:type owl:NamedIndividual ,
+                            OntoSeals:Souppedion .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Coussin3
+OntoSeals:Coussin3 rdf:type owl:NamedIndividual ,
+                            OntoSeals:Souppedion .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croisette1
+OntoSeals:Croisette1 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Croisette .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croisette2
+OntoSeals:Croisette2 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Croisette .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croisette3
+OntoSeals:Croisette3 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Croisette .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croisette4
+OntoSeals:Croisette4 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Croisette .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croisette_faite_de_trois_perles1
+OntoSeals:Croisette_faite_de_trois_perles1 rdf:type owl:NamedIndividual ,
+                                                    OntoSeals:Croisette .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croisette_pattée_dans_un_clipeus1
+OntoSeals:Croisette_pattée_dans_un_clipeus1 rdf:type owl:NamedIndividual ,
+                                                     OntoSeals:Croisette .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croix1
+OntoSeals:Croix1 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Croix .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croix2
+OntoSeals:Croix2 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Croix .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croix3
+OntoSeals:Croix3 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Croix .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croix4
+OntoSeals:Croix4 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Croix .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croix5
+OntoSeals:Croix5 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Croix .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croix_gravée1
+OntoSeals:Croix_gravée1 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Croix .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Croix_patriarcale1
+OntoSeals:Croix_patriarcale1 rdf:type owl:NamedIndividual ,
+                                      OntoSeals:Croix .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cuirasse1
+OntoSeals:Cuirasse1 rdf:type owl:NamedIndividual ,
+                             OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cuirasse2
+OntoSeals:Cuirasse2 rdf:type owl:NamedIndividual ,
+                             OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Cuirasse3
+OntoSeals:Cuirasse3 rdf:type owl:NamedIndividual ,
+                             OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Deux_cercles_de_grènetis1
+OntoSeals:Deux_cercles_de_grènetis1 rdf:type owl:NamedIndividual ,
+                                             OntoSeals:Cerclesgrenetis .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Dôme1
+OntoSeals:Dôme1 rdf:type owl:NamedIndividual ,
+                         OntoSeals:Dome .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Dôme2
+OntoSeals:Dôme2 rdf:type owl:NamedIndividual ,
+                         OntoSeals:Dome .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Empire_byzantin
+OntoSeals:Empire_byzantin rdf:type owl:NamedIndividual ,
+                                   OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Enfant
+OntoSeals:Enfant rdf:type owl:NamedIndividual ,
+                          OntoSeals:Personnage_biblique .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Enfant1
+OntoSeals:Enfant1 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Enfant2
+OntoSeals:Enfant2 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Enfant3
+OntoSeals:Enfant3 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Enfant4
+OntoSeals:Enfant4 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Enfant5
+OntoSeals:Enfant5 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Enfant6
+OntoSeals:Enfant6 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Fer
+OntoSeals:Fer rdf:type owl:NamedIndividual ,
+                       OntoSeals:Materiel .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Feuillage1
+OntoSeals:Feuillage1 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Vegetal .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Globe1
+OntoSeals:Globe1 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Globe .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Grand_palmier1
+OntoSeals:Grand_palmier1 rdf:type owl:NamedIndividual ,
+                                  OntoSeals:Vegetal .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Grégoire
+OntoSeals:Grégoire rdf:type owl:NamedIndividual ,
+                            OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Habit_persan1
+OntoSeals:Habit_persan1 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Hache1
+OntoSeals:Hache1 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Hache .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Himation1
+OntoSeals:Himation1 rdf:type owl:NamedIndividual ,
+                             OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Himation2
+OntoSeals:Himation2 rdf:type owl:NamedIndividual ,
+                             OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Himation3
+OntoSeals:Himation3 rdf:type owl:NamedIndividual ,
+                             OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Humbert
+OntoSeals:Humbert rdf:type owl:NamedIndividual ,
+                           OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Jean
+OntoSeals:Jean rdf:type owl:NamedIndividual ,
+                        OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Jesus_christ
+OntoSeals:Jesus_christ rdf:type owl:NamedIndividual ,
+                                OntoSeals:Personnage_biblique .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Jesus_christ1
+OntoSeals:Jesus_christ1 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Jesus_christ2
+OntoSeals:Jesus_christ2 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Christ .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Joseph
+OntoSeals:Joseph rdf:type owl:NamedIndividual ,
+                          OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Justinien_ier1
+OntoSeals:Justinien_ier1 rdf:type owl:NamedIndividual ,
+                                  OntoSeals:Figure_politique ,
+                                  OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Labarum1
+OntoSeals:Labarum1 rdf:type owl:NamedIndividual ,
+                            OntoSeals:Etendart .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Lance1
+OntoSeals:Lance1 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Lance .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Lance2
+OntoSeals:Lance2 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Lance .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Lance3
+OntoSeals:Lance3 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Lance .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Lance_au_manche_orné_de_trois_boules1
+OntoSeals:Lance_au_manche_orné_de_trois_boules1 rdf:type owl:NamedIndividual ,
+                                                         OntoSeals:Lance .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Lit1
+OntoSeals:Lit1 rdf:type owl:NamedIndividual ,
+                        OntoSeals:Lit .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Liveros
+OntoSeals:Liveros rdf:type owl:NamedIndividual ,
+                           OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Livre1
+OntoSeals:Livre1 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Livre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Livre2
+OntoSeals:Livre2 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Livre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Livre3
+OntoSeals:Livre3 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Livre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Léontios
+OntoSeals:Léontios rdf:type owl:NamedIndividual ,
+                            OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Lôros1
+OntoSeals:Lôros1 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Maphorion1
+OntoSeals:Maphorion1 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Maphorion2
+OntoSeals:Maphorion2 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Maphorion3
+OntoSeals:Maphorion3 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Maria_Makrembolitissa
+OntoSeals:Maria_Makrembolitissa rdf:type owl:NamedIndividual ,
+                                         OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Maria_Sklèraina
+OntoSeals:Maria_Sklèraina rdf:type owl:NamedIndividual ,
+                                   OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Michel_Atouémès
+OntoSeals:Michel_Atouémès rdf:type owl:NamedIndividual ,
+                                   OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Michel_Stryphnos
+OntoSeals:Michel_Stryphnos rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Michel_VIII_Palaiologue
+OntoSeals:Michel_VIII_Palaiologue rdf:type owl:NamedIndividual ,
+                                           OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Moyen_Age
+OntoSeals:Moyen_Age rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Mère_de_dieu
+OntoSeals:Mère_de_dieu rdf:type owl:NamedIndividual ,
+                                OntoSeals:Personnage_biblique .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Mère_de_dieu1
+OntoSeals:Mère_de_dieu1 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Nicéphore_de_Méloé
+OntoSeals:Nicéphore_de_Méloé rdf:type owl:NamedIndividual ,
+                                      OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Omophorion1
+OntoSeals:Omophorion1 rdf:type owl:NamedIndividual ,
+                               OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Omophorion2
+OntoSeals:Omophorion2 rdf:type owl:NamedIndividual ,
+                               OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Or
+OntoSeals:Or rdf:type owl:NamedIndividual ,
+                      OntoSeals:Materiel .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Panneaux_lisses1
+OntoSeals:Panneaux_lisses1 rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Cadre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Patriarche1
+OntoSeals:Patriarche1 rdf:type owl:NamedIndividual ,
+                               OntoSeals:Figure_politique ,
+                               OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Phélonion1
+OntoSeals:Phélonion1 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Phélonion2
+OntoSeals:Phélonion2 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Plomb
+OntoSeals:Plomb rdf:type owl:NamedIndividual ,
+                         OntoSeals:Materiel .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Portail1
+OntoSeals:Portail1 rdf:type owl:NamedIndividual ,
+                            OntoSeals:Porte .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Porte1
+OntoSeals:Porte1 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Porte .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Porte2
+OntoSeals:Porte2 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Porte .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Porte_royale_ouverte1
+OntoSeals:Porte_royale_ouverte1 rdf:type owl:NamedIndividual ,
+                                         OntoSeals:Porte .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Rouleau1
+OntoSeals:Rouleau1 rdf:type owl:NamedIndividual ,
+                            OntoSeals:Rouleau .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Rouleau2
+OntoSeals:Rouleau2 rdf:type owl:NamedIndividual ,
+                            OntoSeals:Rouleau .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Rênes_de_sa_monture1
+OntoSeals:Rênes_de_sa_monture1 rdf:type owl:NamedIndividual ,
+                                        OntoSeals:Monture .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#SCEAU_BYZANTIN
+OntoSeals:SCEAU_BYZANTIN rdf:type owl:NamedIndividual ,
+                                  OntoSeals:Titre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#SCEAU_ECCLÉSIASTIQUE
+OntoSeals:SCEAU_ECCLÉSIASTIQUE rdf:type owl:NamedIndividual ,
+                                        OntoSeals:Titre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#SCEAU_PATRIARCAL
+OntoSeals:SCEAU_PATRIARCAL rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Titre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Saint_georges1
+OntoSeals:Saint_georges1 rdf:type owl:NamedIndividual ,
+                                  OntoSeals:Figure_sainte ,
+                                  OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Saint_hyacinthe1
+OntoSeals:Saint_hyacinthe1 rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Figure_sainte ,
+                                    OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Saint_militaire1
+OntoSeals:Saint_militaire1 rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Figure_sainte ,
+                                    OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Saint_nicolas1
+OntoSeals:Saint_nicolas1 rdf:type owl:NamedIndividual ,
+                                  OntoSeals:Figure_sainte ,
+                                  OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Saint_nicolas2
+OntoSeals:Saint_nicolas2 rdf:type owl:NamedIndividual ,
+                                  OntoSeals:Figure_sainte ,
+                                  OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Saint_nicolas3
+OntoSeals:Saint_nicolas3 rdf:type owl:NamedIndividual ,
+                                  OntoSeals:Figure_sainte ,
+                                  OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Saint_taraise1
+OntoSeals:Saint_taraise1 rdf:type owl:NamedIndividual ,
+                                  OntoSeals:Figure_sainte ,
+                                  OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Saint_théodore1
+OntoSeals:Saint_théodore1 rdf:type owl:NamedIndividual ,
+                                   OntoSeals:Figure_sainte ,
+                                   OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Saint_théodore2
+OntoSeals:Saint_théodore2 rdf:type owl:NamedIndividual ,
+                                   OntoSeals:Figure_sainte ,
+                                   OntoSeals:Personnage .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Samuel_Alousianos
+OntoSeals:Samuel_Alousianos rdf:type owl:NamedIndividual ,
+                                     OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Sophia
+OntoSeals:Sophia rdf:type owl:NamedIndividual ,
+                          OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Souppédion1
+OntoSeals:Souppédion1 rdf:type owl:NamedIndividual ,
+                               OntoSeals:Souppedion .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Souppédion2
+OntoSeals:Souppédion2 rdf:type owl:NamedIndividual ,
+                               OntoSeals:Souppedion .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Souppédion3
+OntoSeals:Souppédion3 rdf:type owl:NamedIndividual ,
+                               OntoSeals:Souppedion .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Souppédion4
+OntoSeals:Souppédion4 rdf:type owl:NamedIndividual ,
+                               OntoSeals:Souppedion .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Souppédion5
+OntoSeals:Souppédion5 rdf:type owl:NamedIndividual ,
+                               OntoSeals:Souppedion .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#TESSÈRE_DE_CHARITÉ
+OntoSeals:TESSÈRE_DE_CHARITÉ rdf:type owl:NamedIndividual ,
+                                      OntoSeals:Titre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Théodora
+OntoSeals:Théodora rdf:type owl:NamedIndividual ,
+                            OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Théodora_Doukaina_Palaiologhina
+OntoSeals:Théodora_Doukaina_Palaiologhina rdf:type owl:NamedIndividual ,
+                                                   OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Thôkos1
+OntoSeals:Thôkos1 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Trone .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Thôkos2
+OntoSeals:Thôkos2 rdf:type owl:NamedIndividual ,
+                           OntoSeals:Trone .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Tibère_Empire_byzantin_Justinien_II
+OntoSeals:Tibère_Empire_byzantin_Justinien_II rdf:type owl:NamedIndividual ,
+                                                       OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Trésor_de_la_Grande_Eglise
+OntoSeals:Trésor_de_la_Grande_Eglise rdf:type owl:NamedIndividual ,
+                                              OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Trône1
+OntoSeals:Trône1 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Trone .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Trône2
+OntoSeals:Trône2 rdf:type owl:NamedIndividual ,
+                          OntoSeals:Trone .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Trône_bas1
+OntoSeals:Trône_bas1 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Trone .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Trône_bas2
+OntoSeals:Trône_bas2 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Trone .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Trône_à_haut_dossier1
+OntoSeals:Trône_à_haut_dossier1 rdf:type owl:NamedIndividual ,
+                                         OntoSeals:Trone .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Trône_à_haut_dossier2
+OntoSeals:Trône_à_haut_dossier2 rdf:type owl:NamedIndividual ,
+                                         OntoSeals:Trone .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_episkepsis
+OntoSeals:Vierge_episkepsis rdf:type owl:NamedIndividual ,
+                                     OntoSeals:Personnage_biblique .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_episkepsis1
+OntoSeals:Vierge_episkepsis1 rdf:type owl:NamedIndividual ,
+                                      OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie
+OntoSeals:Vierge_marie rdf:type owl:NamedIndividual ,
+                                OntoSeals:Personnage_biblique .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie1
+OntoSeals:Vierge_marie1 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie10
+OntoSeals:Vierge_marie10 rdf:type owl:NamedIndividual ,
+                                  OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie11
+OntoSeals:Vierge_marie11 rdf:type owl:NamedIndividual ,
+                                  OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie2
+OntoSeals:Vierge_marie2 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie3
+OntoSeals:Vierge_marie3 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie4
+OntoSeals:Vierge_marie4 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie5
+OntoSeals:Vierge_marie5 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie6
+OntoSeals:Vierge_marie6 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie7
+OntoSeals:Vierge_marie7 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie8
+OntoSeals:Vierge_marie8 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_marie9
+OntoSeals:Vierge_marie9 rdf:type owl:NamedIndividual ,
+                                 OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_nikopoios
+OntoSeals:Vierge_nikopoios rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Personnage_biblique .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_nikopoios1
+OntoSeals:Vierge_nikopoios1 rdf:type owl:NamedIndividual ,
+                                     OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_platytera
+OntoSeals:Vierge_platytera rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Personnage_biblique .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vierge_platytera1
+OntoSeals:Vierge_platytera1 rdf:type owl:NamedIndividual ,
+                                     OntoSeals:Vierge_marie .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Vitalès_Marztellos
+OntoSeals:Vitalès_Marztellos rdf:type owl:NamedIndividual ,
+                                      OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Zôsimas_Rhizaios
+OntoSeals:Zôsimas_Rhizaios rdf:type owl:NamedIndividual ,
+                                    OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Évangiles1
+OntoSeals:Évangiles1 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Livre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Évangiles2
+OntoSeals:Évangiles2 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Livre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Évangiles3
+OntoSeals:Évangiles3 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Livre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Évangiles4
+OntoSeals:Évangiles4 rdf:type owl:NamedIndividual ,
+                              OntoSeals:Livre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Alliage_cuivreux;_petite_cavité_au_milieu_de_deux_faces
+<http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Alliage_cuivreux;_petite_cavité_au_milieu_de_deux_faces> rdf:type owl:NamedIndividual ,
+                                                                                                                                          OntoSeals:Materiel .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#BULLE_D'OR_DE_2_SOLIDI
+<http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#BULLE_D'OR_DE_2_SOLIDI> rdf:type owl:NamedIndividual ,
+                                                                                                         OntoSeals:Titre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#BULLE_D'OR_DE_5_SOLIDI
+<http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#BULLE_D'OR_DE_5_SOLIDI> rdf:type owl:NamedIndividual ,
+                                                                                                         OntoSeals:Titre .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Ekdikoi_de_l'église_de_Sainte-Sophie_de_Constantinople
+<http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Ekdikoi_de_l'église_de_Sainte-Sophie_de_Constantinople> rdf:type owl:NamedIndividual ,
+                                                                                                                                         OntoSeals:Personne .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Modèle_de_l'_église_de_sainte-sophie1
+<http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Modèle_de_l'_église_de_sainte-sophie1> rdf:type owl:NamedIndividual ,
+                                                                                                                        OntoSeals:Rouleau .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Médaillon_au_buste_de_l’enfant1
+<http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Médaillon_au_buste_de_l’enfant1> rdf:type owl:NamedIndividual ,
+                                                                                                                  OntoSeals:Vetus .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Médaillon_avec_l’enfant1
+<http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Médaillon_avec_l’enfant1> rdf:type owl:NamedIndividual ,
+                                                                                                           OntoSeals:Croisette .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Médaillon_de_l’enfant1
+<http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Médaillon_de_l’enfant1> rdf:type owl:NamedIndividual ,
+                                                                                                         OntoSeals:Croisette .
+
+
+###  http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Romain_Ier_Lécapène;Constantin_VII;Christophore
+<http://www.semanticweb.org/alexa/ontologies/2023/2/untitled-ontology-4#Romain_Ier_Lécapène;Constantin_VII;Christophore> rdf:type owl:NamedIndividual ,
+                                                                                                                                  OntoSeals:Personne .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
