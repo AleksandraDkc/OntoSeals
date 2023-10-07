@@ -1,0 +1,31 @@
+Phase: VirginMaryNames
+Input: Token
+Options: control = appelt
+
+Macro: VirginMaryMacro
+(
+  ({Token.string =~ "La|la"})?
+  {Token.string =~ "Vierge|vierge"}
+  ({Token.string =~ "Marie|marie"})?
+)
+
+Rule: FindVirginMary
+(((VirginMaryMacro)):VirginMaryName
+|((VirginMaryMacro)({Token.string =~ "(Episkepsis|episkepsis)(orante)?"})):VirginMaryName_LaViergeEpiskepsis
+|((VirginMaryMacro)({Token.string =~ "Platytéra|platytéra"})):VirginMaryName_ViergePlatytera
+|((VirginMaryMacro){Token.string =~ "Hodégètria|hodégètria"}):VirginMaryName_ViergeHodegetria
+|((VirginMaryMacro)({Token.string =~ "Nikopoios|nikopoios"})):VirginMaryName_ViergeNikopoios
+|({Token.string =~ "Mère|mère"}{Token.string =~ "de"}{Token.string =~ "Dieu|dieu"}):VirginMaryName_MereDeDieu
+|((VirginMaryMacro)({Token.string =~ "Odigitria|odigitria"})):VirginMaryName_ViergeOdigitria
+({Token.string =~ "(La|la)"}{Token.string =~ "(Théotokos|théotokos)"}):VirginMaryName_LaTheotokos
+):VirginMary
+-->
+:VirginMaryName.FindVirginMary = {Personnage_biblique = "La Vierge Marie", appelation = "La Vierge Marie", Genre = "Feminin"},
+:VirginMaryName_LaViergeEpiskepsis.FindVirginMary = {Personnage_biblique = "La Vierge Marie", appelation = "La Vierge Episkepsis", Genre = "Feminin"},
+:VirginMaryName_ViergePlatytera.FindVirginMary = {Personnage_biblique = "La Vierge Marie", appelation = "Vierge Platytera", Genre = "Feminin"},
+:VirginMaryName_ViergeHodegetria.FindVirginMary = {Personnage_biblique = "La Vierge Marie", appelation = "Vierge Hodégètria", Genre = "Feminin"},
+:VirginMaryName_ViergeNikopoios.FindVirginMary = {Personnage_biblique = "La Vierge Marie", appelation = "Vierge Nikopoios", Genre = "Feminin"},
+:VirginMaryName_MereDeDieu.FindVirginMary = {Personnage_biblique = "La Vierge Marie", appelation = "Mère de Dieu", Genre = "Feminin"},
+:VirginMaryName_ViergeOdigitria.FindVirginMary = {Personnage_biblique = "La Vierge Marie", appelation = "Vierge Odigitria", Genre = "Feminin"},
+:VirginMaryName_LaTheotokos.FindVirginMary = {Personnage_biblique = "La Vierge Marie", appelation = "La Theotokos", Genre = "Feminin"},
+:VirginMary.FindVirginMary = {Personnage_biblique = "La Vierge Marie", Genre = "Feminin"}

@@ -1,0 +1,50 @@
+Phase: JesusChristAppelts
+Input: Token
+Options: control = appelt
+
+Macro: ChristMacro
+(
+  ({Token.string =~ "Christ"})
+)
+
+
+
+Rule: JesusChrist
+(
+  ({Token.string =~ "(Je|Jé)sus"})
+  ({Token.string =~ "(-| )?"})
+  (ChristMacro)
+):JesusChristAppelt
+-->
+:JesusChristAppelt.JesusChrist = {Personnage_biblique = "Jesus-Christ", appelation = "Jesus Christ", Genre = "Masculin"}
+
+Rule: Christ
+(
+  ({Token.string == "Christ"})
+):JesusChristAppelt
+-->
+:JesusChristAppelt.Christ = {Personnage_biblique = "Jesus-Christ", appelation = "Christ", Genre = "Masculin"}
+
+
+Rule: LeChrist
+(
+  ({Token.string =~ "(L|l)e?"})
+  (ChristMacro)
+):JesusChristAppelt
+-->
+:JesusChristAppelt.LeChrist = {Personnage_biblique = "Jesus-Christ", appelation = "Le Christ", Genre = "Masculin"}
+
+Rule: Christ_Enfant
+(
+  ({Token.string =~ "Enfant"})
+):JesusChristAppelt
+-->
+:JesusChristAppelt.Christ_Enfant = {Personnage_biblique = "Jesus-Christ", appelation = "Enfant", Genre = "Masculin"}
+
+Rule: Christ_Emmanuel
+(
+  (ChristMacro)
+  ({Token.string =~ "(E|e)mmanuel"})
+):JesusChristAppelt
+-->
+:JesusChristAppelt.Christ_Emmanuel = {Personnage_biblique = "Jesus-Christ", appelation = "Christ_Emmanuel", Genre = "Masculin"}
